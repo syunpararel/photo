@@ -8,4 +8,5 @@ class User < ApplicationRecord
   validates :password, length: { in: 8..32 }
   # # パスワードをアルファベット、数字の混合のみ可能にする。
   validates :password, format: { with: /\A[A-Za-z0-9]+\Z/ }
+  has_many :topics
 end
